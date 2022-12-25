@@ -1,12 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
-} 
+}
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: #000;
     color: #fff;
@@ -29,7 +31,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -56,7 +58,7 @@ nav ul li a::after {
     background: aqua;
     position: absolute;
     left: 0;
-    bottom: -6px ;
+    bottom: -6px;
     transition: 0.3s;
 }
 
@@ -69,7 +71,7 @@ nav ul li a:hover::after {
     font-size: 30px;
 }
 
-.headertext h1{
+.headertext h1 {
     margin-top: 20px;
     margin-bottom: 20%;
     font-size: 50px;
@@ -87,21 +89,26 @@ nav ul li a:hover::after {
     margin-left: 20px;
     color: #ababab;
 }
+
 .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .about-col-1 {
     flex-basis: 35%;
 }
-.about-col-1 img{
+
+.about-col-1 img {
     width: 100%;
     border-radius: 15px;
 }
+
 .about-col-2 {
     flex-basis: 60%;
 }
+
 .sub-title {
     text-align: left;
     font-size: 50px;
@@ -109,21 +116,24 @@ nav ul li a:hover::after {
     color: #fff;
     padding-bottom: 10px;
 }
+
 .sub-titles+p {
     font-size: 125%;
 }
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
 
- .tab-links {
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     position: relative;
 }
+
 .tab-links::after {
     content: '';
     width: 0;
@@ -134,28 +144,33 @@ nav ul li a:hover::after {
     bottom: -8px;
     transition: 0.5s
 }
-.tab-links.active-link::after{
+
+.tab-links.active-link::after {
     width: 60%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 
 }
+
 .tab-contents ul li span {
     color: aqua;
     margin: 20;
 }
+
 .tab-contents {
     display: none;
 }
+
 .tab-contents.active-tab {
     display: block;
 }
 
 /* ------------------contact----------------------- */
 
-.row{
+.row {
     align-items: center;
     margin-top: 10rem;
 }
@@ -163,20 +178,25 @@ nav ul li a:hover::after {
 .contact-left {
     flex-basis: 35%;
 }
+
 .contact-right {
     flex-basis: 60%;
 }
-.contact-left p{
+
+.contact-left p {
     margin-top: 30px;
 }
+
 .contact-left p i {
     color: aqua;
     margin-right: 15px;
     font-size: 25px;
 }
+
 .social-icon {
     margin-top: 30px;
 }
+
 .social-icon a {
     text-decoration: none;
     font-size: 30px;
@@ -185,14 +205,18 @@ nav ul li a:hover::after {
     display: inline-block;
     transition: 0.5s;
 }
+
 .social-icon a:hover {
     color: aqua;
     transform: translateY(-5px);
 }
+
 .contact-right form {
     width: 100%;
 }
-form input, form textarea {
+
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -201,7 +225,8 @@ form input, form textarea {
     margin: 15px 0;
     resize: none;
 }
-.btn{
+
+.btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -213,10 +238,12 @@ form input, form textarea {
     text-decoration: none;
     transition: background 0.5s;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: aqua;
     color: #000;
 }
+
 .copyright {
     width: 100%;
     text-align: center;
@@ -225,6 +252,7 @@ form input, form textarea {
     font-weight: 300;
     margin-top: 20px;
 }
+
 nav .fas {
     display: none;
 }
@@ -232,27 +260,32 @@ nav .fas {
 
 /* ---------CCS for mobile ----------- */
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     #header {
         background-attachment: fixed;
         background-image: url("res/mobile.jpg");
         background-size: 100%;
     }
-    .headertext{
+
+    .headertext {
         margin-top: 110%;
         font-size: 16px;
     }
-    .headertext h1{
+
+    .headertext h1 {
         font-size: 30px;
     }
+
     #name {
         font-size: 35px;
         color: aqua;
     }
+
     nav .fas {
         display: block;
         font-size: 25px;
     }
+
     nav ul {
         background: aqua;
         position: fixed;
@@ -264,36 +297,48 @@ nav .fas {
         z-index: 2;
         transition: right 0.5s;
     }
-    nav ul li a, nav ul i {
+
+    nav ul li a,
+    nav ul i {
         color: #000;
     }
+
     nav ul li {
         display: block;
         margin: 25px;
     }
+
     nav ul .fas {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
+
     .sub-title {
         text-align: left;
         font-size: 40px;
     }
-    .about-col-1, .about-col-2 {
+
+    .about-col-1,
+    .about-col-2 {
         flex-basis: 100%;
     }
+
     .about-col-1 {
         margin-bottom: 30px;
     }
+
     #about {
         padding: 25px;
         margin: 25px;
     }
-    .contact-left, .contact-right {
+
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
     }
+
     .copyright {
         font-size: 14px;
     }
@@ -305,11 +350,12 @@ nav .fas {
     font-size: 150%;
     margin-top: -40px;
     display: block;
-} 
+}
 
 #preloader {
     background-color: var(--bg);
     color: var(--fg);
+    font: 1em/1.5 sans-serif;
     height: 100vh;
     display: grid;
     place-items: center;
@@ -317,81 +363,114 @@ nav .fas {
 }
 
 #preloader * {
-	border: 0;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#preloader :root {
-	--hue: 223;
-	--bg: hsl(var(--hue),10%,90%);
-	--fg: hsl(var(--hue),10%,10%);
-	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+:root {
+    --hue: 223;
+    --bg: hsl(var(--hue), 10%, 90%);
+    --fg: hsl(var(--hue), 10%, 10%);
+    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
 }
 
 .pl,
 .pl__worm {
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 .pl {
-	animation-name: bump;
-	animation-timing-function: linear;
-	width: 8em;
-	height: 8em;
+    animation-name: bump;
+    animation-timing-function: linear;
+    width: 8em;
+    height: 8em;
 }
 
 .pl__ring {
-	stroke: hsla(var(--hue),10%,10%,0.1);
-	transition: stroke 0.3s;
+    stroke: hsla(var(--hue), 10%, 10%, 0.1);
+    transition: stroke 0.3s;
 }
 
 .pl__worm {
-	animation-name: worm;
-	animation-timing-function: cubic-bezier(0.42,0.17,0.75,0.83);
+    animation-name: worm;
+    animation-timing-function: cubic-bezier(0.42, 0.17, 0.75, 0.83);
 }
 
 @media (prefers-color-scheme: dark) {
-	#preloader:root {
-		--bg: hsl(var(--hue),10%,10%);
-		--fg: hsl(var(--hue),10%,90%);
-	}
-	.pl__ring {
-		stroke: hsla(var(--hue),10%,90%,0.1);
-	}
+    :root {
+        --bg: hsl(var(--hue), 10%, 10%);
+        --fg: hsl(var(--hue), 10%, 90%);
+    }
+
+    .pl__ring {
+        stroke: hsla(var(--hue), 10%, 90%, 0.1);
+    }
 }
 
 /* Animations */
 @keyframes bump {
-	from,
-	42%,
-	46%,
-	51%,
-	55%,
-	59%,
-	63%,
-	67%,
-	71%,
-	74%,
-	78%,
-	81%,
-	85%,
-	88%,
-	92%,
-	to { transform: translate(0,0); }
-	44% { transform: translate(1.33%,6.75%); }
-	53% { transform: translate(-16.67%,-0.54%); }
-	61% { transform: translate(3.66%,-2.46%); }
-	69% { transform: translate(-0.59%,15.27%); }
-	76% { transform: translate(-1.92%,-4.68%); }
-	83% { transform: translate(9.38%,0.96%); }
-	90% { transform: translate(-4.55%,1.98%); }
+
+    from,
+    42%,
+    46%,
+    51%,
+    55%,
+    59%,
+    63%,
+    67%,
+    71%,
+    74%,
+    78%,
+    81%,
+    85%,
+    88%,
+    92%,
+    to {
+        transform: translate(0, 0);
+    }
+
+    44% {
+        transform: translate(1.33%, 6.75%);
+    }
+
+    53% {
+        transform: translate(-16.67%, -0.54%);
+    }
+
+    61% {
+        transform: translate(3.66%, -2.46%);
+    }
+
+    69% {
+        transform: translate(-0.59%, 15.27%);
+    }
+
+    76% {
+        transform: translate(-1.92%, -4.68%);
+    }
+
+    83% {
+        transform: translate(9.38%, 0.96%);
+    }
+
+    90% {
+        transform: translate(-4.55%, 1.98%);
+    }
 }
 
 @keyframes worm {
-	from { stroke-dashoffset: 10; }
-	25% { stroke-dashoffset: 295; }
-	to { stroke-dashoffset: 1165; }
+    from {
+        stroke-dashoffset: 10;
+    }
+
+    25% {
+        stroke-dashoffset: 295;
+    }
+
+    to {
+        stroke-dashoffset: 1165;
+    }
 }

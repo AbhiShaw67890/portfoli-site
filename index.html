@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,146 +12,176 @@
 </head>
 
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="res/nomi.jpg" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-            
-        </nav>
-        <div class="headertext">
-            <p>Tech enthusiast</p>
-            <h1>Hi, i'm <span id="name">Nomi Shaw</span><br>Class-XII Commerce Student</h1>
-        </div>
+
+    <!-- ------------------------- Preload secton --------------------------- -->
+    <div id="preloader">
+        <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="hsl(193,90%,55%)" />
+                    <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                </linearGradient>
+            </defs>
+            <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16"
+                stroke-linecap="round" />
+            <path class="pl__worm"
+                d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z"
+                fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="44 1111" stroke-dashoffset="10" />
+        </svg>
     </div>
 
-    <!-- ---------------------------About Section---------------------------- -->
-
-    <div id="about">
-        <div class="cointainer">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="res/PXL_20211111_002624233.jpg" alt="">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hello, my name is Nomi Shaw.
-                         I am a Higher Secondary Commerce Student, 
-                         Studying at St.Peter's Higher Secondary School, Gayaganga. 
-                         I am from West Bengal state located in India. 
-                         I like to hang out with friends, play video games, 
-                         and watch anime in my free time.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('hobby')">Hobby</p>
-                    </div>
-
-                    <div class="tab-contents active-tab" id="education">
-                        <ul>
-                            <li><span>2021-present</span><br>Persuing Higher Secondary Education<br>ST. Peter's Higher Secondary School, Gayaganga</li><br>
-                            <li><span>2010-2021</span><br>Completed Primary and Higher Education<br>Loyola High School,Uttar Salbari</li><br>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="hobby">
-                        <ul>
-                            <li><span>Outdoor Games</span><br>Football, Criket, Tennis etc... </li><br>
-                            <li><span>Video Games</span><br>Free Fire, Clash of Clan, GTA etc... </li><br>
-                            <li><span>Watching Anime</span><br>Doraemon, Pokemon, Naruto etc... </li><br>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ---------------------------contact Section---------------------------- -->
-    <div id="contact">
+    <!-- ------------------------- Home/Navbar --------------------------- -->
+    <div id="header">
         <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>nomishaw9@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>+91 7699 193 400</p>
-                    <div class="social-icon">
-                        <a href="https://wa.me/917699193400?text=Hi"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.facebook.com/nomi.shaw.1"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/nomi__ff/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/UCMjxE_DObWpKdpaR5j3tMmA"><i class="fa-brands fa-youtube"></i></a>
+            <nav>
+                <img src="res/nomi.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="headertext">
+                <p>Tech enthusiast</p>
+                <h1>Hi, i'm <span id="name">Nomi Shaw</span><br>Class-XII Commerce Student</h1>
+            </div>
+        </div>
+
+        <!-- ---------------------------About Section---------------------------- -->
+
+        <div id="about">
+            <div class="cointainer">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="res/PXL_20211111_002624233.jpg" alt="">
                     </div>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email / Phone number" required>
-                        <textarea name="Messages" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hello, my name is Nomi Shaw.
+                            I am a Higher Secondary Commerce Student,
+                            Studying at St.Peter's Higher Secondary School, Gayaganga.
+                            I am from West Bengal state located in India.
+                            I like to hang out with friends, play video games,
+                            and watch anime in my free time.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('hobby')">Hobby</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>2021-present</span><br>Persuing Higher Secondary Education<br>ST. Peter's
+                                    Higher Secondary School, Gayaganga</li><br>
+                                <li><span>2010-2021</span><br>Completed Primary and Higher Education<br>Loyola High
+                                    School,Uttar Salbari</li><br>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="hobby">
+                            <ul>
+                                <li><span>Outdoor Games</span><br>Football, Criket, Tennis etc... </li><br>
+                                <li><span>Video Games</span><br>Free Fire, Clash of Clan, GTA etc... </li><br>
+                                <li><span>Watching Anime</span><br>Doraemon, Pokemon, Naruto etc... </li><br>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- ---------------------------Contact Section---------------------------- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>nomishaw9@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+91 7699 193 400</p>
+                        <div class="social-icon">
+                            <a href="https://wa.me/917699193400?text=Hi"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/nomi.shaw.1"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/nomi__ff/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCMjxE_DObWpKdpaR5j3tMmA"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email / Phone number" required>
+                            <textarea name="Messages" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------------------------------- Footer---------------------------------- -->
+        <div class="copyright">
+            <p>Made with 💖 in 2022</p>
+        </div>
+
     </div>
-    
-    <!-- -------------------------------- footer---------------------------------- -->
-    <div class="copyright">
-        <p>Meade with 💖 in 2022</p>
-    </div>
 
-</div>
+    <!-- ---------------------------JavaScript Section---------------------------- -->
 
-
-<!-- ---------------------------JavaScript Section---------------------------- -->
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab (tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
 
-<script>
-    var sidemeu=document.getElementById("sidemenu");
-    function openmenu () {
-        sidemeu.style.right= "0";
-    }
-    function closemenu (){
-        sidemeu.style.right= "-200px";
-    }
-</script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxgWgmIxV423xtrXdZljdpHwRqBeM_apBuhjEyPTHUEauS5wdFLwtbf3skGgrpJ-rVS/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgWgmIxV423xtrXdZljdpHwRqBeM_apBuhjEyPTHUEauS5wdFLwtbf3skGgrpJ-rVS/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent succesfully...."
-            setTimeout(function () {
-                msg.innerHTML=""                
-            },5000)
-            form.reset()
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent succesfully...."
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </script>
 
 </body>
-</html> 
+
+</html>
