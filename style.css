@@ -72,6 +72,7 @@ nav ul li a:hover::after {
 }
 
 .headertext h1 {
+    text-shadow: 2px 2px 5px aqua;
     margin-top: 20px;
     margin-bottom: 20%;
     font-size: 50px;
@@ -103,6 +104,7 @@ nav ul li a:hover::after {
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
+    box-shadow: 5px 5px 10px aqua;
 }
 
 .about-col-2 {
@@ -220,10 +222,13 @@ form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: aqua;
+    color: #ababab;
+    border-radius: 5px;
+    background: #212121;
     padding: 15px;
     margin: 15px 0;
     resize: none;
+    box-shadow: 3px 3px 5px aqua;
 }
 
 .btn {
@@ -231,17 +236,19 @@ form textarea {
     margin: 50px auto;
     width: fit-content;
     background-color: black;
-    color: #fff;
+    color: #ababab;
     border: 1px solid aqua;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
     transition: background 0.5s;
+    box-shadow: 3px 3px 5px aqua;
 }
 
 .btn:hover {
     background-color: aqua;
     color: #000;
+    box-shadow: 3px 3px 5px black;
 }
 
 .copyright {
@@ -355,7 +362,6 @@ nav .fas {
 #preloader {
     background-color: var(--bg);
     color: var(--fg);
-    font: 1em/1.5 sans-serif;
     height: 100vh;
     display: grid;
     place-items: center;
@@ -369,7 +375,7 @@ nav .fas {
     padding: 0;
 }
 
-:root {
+#preloader :root {
     --hue: 223;
     --bg: hsl(var(--hue), 10%, 90%);
     --fg: hsl(var(--hue), 10%, 10%);
@@ -400,7 +406,7 @@ nav .fas {
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    #preloader:root {
         --bg: hsl(var(--hue), 10%, 10%);
         --fg: hsl(var(--hue), 10%, 90%);
     }
