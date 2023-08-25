@@ -1,5 +1,7 @@
 .gitignore
-res/
+KineMaster/
+res/desktop.jpg
+res/mobile.jpg
 preload.css
 preloader.html
 index_.html
