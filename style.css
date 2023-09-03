@@ -81,7 +81,7 @@ nav ul li a:hover::after {
 
 #name {
     font-size: 60px;
-    background: linear-gradient(120deg,#00ffff, #6F00FF,#007FFF,#00ffff);
+    background: linear-gradient(120deg,#00ffff, #4102ff,#007FFF,#00ffff);
     background-size: 400%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -309,7 +309,8 @@ nav .fas {
     }
 
     nav ul {
-        background: aqua;
+        background: #0000;
+        backdrop-filter: blur(10px);
         position: fixed;
         top: 0;
         right: -300px;
@@ -322,12 +323,13 @@ nav .fas {
 
     nav ul li a,
     nav ul i {
-        color: #000;
+        color: #fff;
     }
 
     nav ul li {
         display: block;
         margin: 25px;
+        margin-top: 50px;
     }
 
     nav ul .fas {
