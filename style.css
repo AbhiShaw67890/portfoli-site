@@ -81,11 +81,11 @@ nav ul li a:hover::after {
 
 #name {
     font-size: 60px;
-    background: linear-gradient(120deg,#00ffff, #4102ff,#007FFF,#00ffff);
+    background: linear-gradient(120deg,#00ffff, #4102ff,#6F00FF,#00ffff);
     background-size: 400%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
 }
 
 @keyframes animate {
@@ -138,6 +138,11 @@ nav ul li a:hover::after {
     font-size: 125%;
 }
 
+.intro {
+    font-size: 110%;
+    text-align: justify;
+}
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
@@ -169,7 +174,7 @@ nav ul li a:hover::after {
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
-
+    line-height: 1.5rem;
 }
 
 .tab-contents ul li span {
