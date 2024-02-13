@@ -1,8 +1,9 @@
     :root {
-        --theme-color: #877981; 
-        --theme-color-light: #cab5c1; 
-        --theme-color-dark:  #0a090a;
-        --theme-color-dark-secondary: #100e0f;
+        --theme-color: #877981;                 /* darkenedPrimary */
+        --transparent: #87797122;               /* transparent */
+        --theme-color-dark:  #0a090a;           /* darkerShade */
+        --theme-color-light: #cab5c1;           /* lighterShade */
+        --theme-color-dark-secondary: #100e0f;  /* darkSecondaryShade */
     }
     
     * {
@@ -10,6 +11,7 @@
         padding: 0;
         font-family: 'poppins', sans-serif;
         box-sizing: border-box;
+        user-select: none;
     }
 
     html {
@@ -19,6 +21,10 @@
     body {
         background: var(--theme-color-dark);
         color: var(--theme-color);
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
     }
 
     #header {
@@ -89,6 +95,7 @@
         margin-top: 20px;
         margin-bottom: 20%;
         font-size: 50px;
+        user-select: none;
     }
 
     #name {
@@ -112,7 +119,7 @@
     /* ---------About Section -------- */
 
     #about {
-        padding: 80px;
+        padding: 10%;
         margin-left: 20px;
         color: #ababab;
     }
@@ -296,6 +303,11 @@
         display: none;
     }
 
+    .copyright p a {
+        text-decoration: none;
+        color: var(--theme-color-light);
+        font-weight: 500;
+    }
 
     /* ---------CCS for mobile ----------- */
 
@@ -329,7 +341,7 @@
         }
 
         nav ul {
-            background: #0000;
+            background: var(--transparent);
             backdrop-filter: blur(10px);
             position: fixed;
             top: 0;

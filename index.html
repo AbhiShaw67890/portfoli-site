@@ -37,9 +37,9 @@
             <nav>
                 <img src="res/nomi.jpg" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#header" onclick="closemenu()">Home</a></li>
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
                     <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-brush themebutton" onclick="changeThemeColor()"></i>
@@ -107,14 +107,18 @@
                         <p><i class="fa-solid fa-phone"></i>+91 7699 193 400</p>
                         <p><i class="fa-solid fa-envelope"></i>nomishaw9@gmail.com</p>
                         <div class="social-icon">
-                            <a target="_blank" href="https://wa.me/917699193400?text=Hi"><i
-                                    class="fa-brands fa-whatsapp"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/nomi.shaw.1"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://www.instagram.com/nomi__ff/"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UCMjxE_DObWpKdpaR5j3tMmA"><i
-                                    class="fa-brands fa-youtube"></i></a>
+                            <!--  telegram icon -->
+                            <a target="_blank" href="https://t.me/nomishaw">
+                                <i class="fa-brands fa-telegram"></i>  
+                            </a>
+                            <!--  github icon -->
+                            <a target="_blank" href="https://github.com/nomishaw21">
+                                <i class="fa-brands fa-github"></i>
+                            </a>    
+                            <!--  whatsapp icon -->                        
+                            <a target="_blank" href="https://wa.me/917699193400?text=Hi">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="contact-right">
@@ -132,7 +136,7 @@
 
         <!-- -------------------------------- Footer---------------------------------- -->
         <div class="copyright">
-            <p>Made with 💖 in 2022/23</p>
+            <p>Created and managed by <a href="https://github.com/abhishaw67890"> abhishaw67890</a> with 💖 in 2022-24</p>
         </div>
 
     </div>
@@ -199,6 +203,10 @@
 
             // Set the primary theme color to the darkened shade
             document.documentElement.style.setProperty('--theme-color', darkenedPrimary);
+            
+            // Set the transparent theme color
+            var transparent = darkenedPrimary+"11";
+            document.documentElement.style.setProperty('--transparent', transparent);
 
             // Calculate and set a darker shade for backgrounds
             var darkerShade = shadeColor(randomColor, -92); // e.g., -30% darker
@@ -206,7 +214,6 @@
 
             var lighterShade = shadeColor(randomColor, 50); // e.g., -30% darker
             document.documentElement.style.setProperty('--theme-color-light', lighterShade);
-
 
             // Calculate and set an even darker or different shade for secondary elements
             var darkSecondaryShade = shadeColor(randomColor, -88); // e.g., -50% darker
