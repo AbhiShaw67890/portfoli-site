@@ -77,13 +77,23 @@
         transition: 0.3s;
     }
 
+    nav ul li a:hover {
+        color: var(--theme-color-light);
+    }
+
     nav ul li a:hover::after {
         width: 100%;
     }
 
     .themebutton {
-        font-size: 150%;
+        cursor: pointer;
+        font-size: 200%;
         color: var(--theme-color);
+    }
+
+    .themebutton:hover {
+        color: var(--theme-color-light);
+        text-shadow: 0 0 30px var(--theme-color-light);
     }
 
     .headertext {
@@ -282,6 +292,7 @@
         text-decoration: none;
         transition: background 0.5s;
         box-shadow: 3px 3px 5px var(--theme-color);
+        cursor: pointer;
     }
 
     .btn:hover {
